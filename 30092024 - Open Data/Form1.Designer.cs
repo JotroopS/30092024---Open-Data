@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lista = new System.Windows.Forms.ListBox();
+            this.listaa = new System.Windows.Forms.ListBox();
             this.ordinapopolarità = new System.Windows.Forms.Button();
             this.ordinadatarilascio = new System.Windows.Forms.Button();
             this.ordinatitolo = new System.Windows.Forms.Button();
             this.ordinavoto = new System.Windows.Forms.Button();
+            this.lista = new System.Windows.Forms.DataGridView();
+            this.popolarità = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datadirilascio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.lista)).BeginInit();
             this.SuspendLayout();
             // 
-            // lista
+            // listaa
             // 
-            this.lista.FormattingEnabled = true;
-            this.lista.Location = new System.Drawing.Point(12, 95);
-            this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(776, 394);
-            this.lista.TabIndex = 0;
+            this.listaa.FormattingEnabled = true;
+            this.listaa.Location = new System.Drawing.Point(12, 95);
+            this.listaa.Name = "listaa";
+            this.listaa.Size = new System.Drawing.Size(776, 394);
+            this.listaa.TabIndex = 0;
             // 
             // ordinapopolarità
             // 
@@ -83,30 +89,70 @@
             this.ordinavoto.Text = "Ordina per voto";
             this.ordinavoto.UseVisualStyleBackColor = true;
             // 
+            // lista
+            // 
+            this.lista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.popolarità,
+            this.datadirilascio,
+            this.titolo,
+            this.voto});
+            this.lista.Location = new System.Drawing.Point(176, 95);
+            this.lista.Name = "lista";
+            this.lista.Size = new System.Drawing.Size(612, 394);
+            this.lista.TabIndex = 5;
+            // 
+            // popolarità
+            // 
+            this.popolarità.HeaderText = "Popolarità";
+            this.popolarità.Name = "popolarità";
+            // 
+            // datadirilascio
+            // 
+            this.datadirilascio.HeaderText = "Data di rilascio";
+            this.datadirilascio.Name = "datadirilascio";
+            // 
+            // titolo
+            // 
+            this.titolo.HeaderText = "Titolo";
+            this.titolo.Name = "titolo";
+            // 
+            // voto
+            // 
+            this.voto.HeaderText = "Voto";
+            this.voto.Name = "voto";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.lista);
             this.Controls.Add(this.ordinavoto);
             this.Controls.Add(this.ordinatitolo);
             this.Controls.Add(this.ordinadatarilascio);
             this.Controls.Add(this.ordinapopolarità);
-            this.Controls.Add(this.lista);
+            this.Controls.Add(this.listaa);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.lista)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lista;
+        private System.Windows.Forms.ListBox listaa;
         private System.Windows.Forms.Button ordinapopolarità;
         private System.Windows.Forms.Button ordinadatarilascio;
         private System.Windows.Forms.Button ordinatitolo;
         private System.Windows.Forms.Button ordinavoto;
+        private System.Windows.Forms.DataGridView lista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn popolarità;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datadirilascio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titolo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn voto;
     }
 }
 
